@@ -5,10 +5,9 @@ import { SwaggerModule, DocumentBuilder } from '@nestjs/swagger';
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   const options = new DocumentBuilder()
-    .setTitle('Your API Title')
-    .setDescription('API Description')
+    .setTitle('Memocoll API Service')
+    .setDescription('Povided api for memocall web')
     .setVersion('1.0')
-    .addTag('example') // Add tags for grouping your APIs
     .build();
   const document = SwaggerModule.createDocument(app, options);
   SwaggerModule.setup('api', app, document);
