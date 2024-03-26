@@ -8,6 +8,7 @@ WORKDIR /app
 COPY package*.json ./
 
 # Install dependencies
+RUN yarn --version
 RUN yarn install --production
 
 # Copy the rest of the application
@@ -17,4 +18,4 @@ COPY . .
 EXPOSE 3300
 
 # Command to run the application
-CMD ["npm", "run", "start:prod"]
+CMD ["npm", "run", "start"]
